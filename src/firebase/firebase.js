@@ -29,16 +29,11 @@ database.ref().set({
     console.log('This failed.', e)
 });
 
-// database.ref().set('This is my data.')
-
-// database.ref('age').set(35);
-// database.ref('location/city').set('Clovis');
-
-database.ref('attributes').set({
-    height: 68,
-    weight: 200
-}).then(() => {
-    console.log('Success!')
-}).catch((e) => {
-    console.log('This failed.', e)
-});
+// database.ref()
+//     .remove()
+//     .then(() => {
+//         console.log('Data was removed')
+//     })
+//     .catch((e) => {
+//         console.log('Did not remove data', e)
+//     });
