@@ -13,6 +13,24 @@ const config = {
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-    name: 'Jonathan Wheeler'
+const database = firebase.database();
+
+database.ref().set({
+    name: 'Jonathan Wheeler',
+    age: 34,
+    isSingle: false,
+    location: {
+        city: 'Fresno',
+        country: 'United States'
+    }
+});
+
+// database.ref().set('This is my data.')
+
+database.ref('age').set(35);
+database.ref('location/city').set('Clovis');
+
+database.ref('attributes').set({
+    height: 68,
+    weight: 200
 });
