@@ -23,14 +23,22 @@ database.ref().set({
         city: 'Fresno',
         country: 'United States'
     }
+}).then(() => {
+    console.log('Data is saved!')
+}).catch((e) => {
+    console.log('This failed.', e)
 });
 
 // database.ref().set('This is my data.')
 
-database.ref('age').set(35);
-database.ref('location/city').set('Clovis');
+// database.ref('age').set(35);
+// database.ref('location/city').set('Clovis');
 
 database.ref('attributes').set({
     height: 68,
     weight: 200
+}).then(() => {
+    console.log('Success!')
+}).catch((e) => {
+    console.log('This failed.', e)
 });
