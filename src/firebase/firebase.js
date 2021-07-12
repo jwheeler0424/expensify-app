@@ -15,20 +15,22 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-// child_removed
-database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+export { firebase, database as default };
 
-// child_changed
-database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+// // child_removed
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
 
-// child_added
-database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-})
+// // child_changed
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // child_added
+// database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// })
 
 // database.ref('expenses').on('value', (snapshot) => {
 //     const expenses = [];
@@ -75,9 +77,9 @@ database.ref('expenses').on('child_added', (snapshot) => {
 //     createdAt: 12345678912345
 // }]
 
-database.ref('expenses').push({
-    description: 'Credit Card',
-    note: '',
-    amount: 4500,
-    createdAt: 12345678912345
-});
+// database.ref('expenses').push({
+//     description: 'Credit Card',
+//     note: '',
+//     amount: 4500,
+//     createdAt: 12345678912345
+// });
